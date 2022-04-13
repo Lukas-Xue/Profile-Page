@@ -4,7 +4,7 @@
 * Author URL: http://themeforest.net/user/lmpixels
 * Version: 1.5.0
 */
-
+var animNumber3 = 62;
 var PageTransitions = (function ($, options) {
 "use strict";
     var sectionsContainer = $(".animated-sections"),
@@ -84,6 +84,7 @@ var PageTransitions = (function ($, options) {
 
         $(".lmpixels-arrow-right").click(function() {
             var activeItem = $('.main-menu a.active').parent("li");
+            animNumber3 = 62;
             activeItem.next("li").children("a").click();
             if ( activeItem.is(':last-child') ) {
                 $('.main-menu li:first-child').children("a").click();
@@ -91,6 +92,7 @@ var PageTransitions = (function ($, options) {
         });
 
         $(".lmpixels-arrow-left").click(function() {
+            animNumber3 = 63;
             var activeItem = $('.main-menu a.active').parent("li");
             activeItem.prev("li").children("a").click();
             if ( activeItem.is(':first-child') ) {
@@ -171,8 +173,8 @@ var PageTransitions = (function ($, options) {
 
         // Checking for 'data-animation' attribute.
         if (!($pageTrigger.attr('data-animation'))) {
-            var animNumber = 61;
-            $pageTrigger.data('animation',animNumber);
+            var animNumber = 62;
+            $pageTrigger.data('animation',animNumber3);
         }
 
         var animation = $pageTrigger.data('animation').toString(),
